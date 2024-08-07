@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Banner from './banner';
+import Sidebar from './sidebar';
+import About from './About';
+import WeatherForecast from './WeatherForecast';
+import ContactForm from './ContactForm';
 import './App.css';
+import WeatherDetails from './WeatherDetails';
+import SunAndMoon from './SunAndMoon';
+import ContactMe from './ContactMe ';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [selectedCity, setSelectedCity] = useState('London');
+    const [showContactForm, setShowContactForm] = useState(false);
+    const handleSelectCity = (city) => {
+        setSelectedCity(city);
+        setShowContactForm(false);
+    };
+
+    const handleSelectForm = () => {
+        setShowContactForm(true);
+    };
+    
+    return (
+        <div className="app">
+            <Sidebar selectedCity={selectedCity} onSelectCity={handleSelectCity} onSelectForm={handleSelectForm}
+            />
+            <div className="content">
+                <Banner city={selectedCity} />
+                {showContactForm ? (
+                    <ContactForm />
+                ) : (
+                    <>
+                        <WeatherForecast city={selectedCity} />
+                        <WeatherDetails city={selectedCity} />
+                        <SunAndMoon city={selectedCity} />                     
+                        <About />
+                        <ContactMe />
+                        
+                    </>
+                )}
+            </div>
+        </div>
+
+    );
+};
+
 
 export default App;
+
+
+

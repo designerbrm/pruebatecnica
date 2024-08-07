@@ -1,0 +1,31 @@
+.sun-and-moon {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-top: 32px;
+    width: 52%;
+    text-align: center;
+    margin-left: 28em;
+    height: 140px;
+}
+
+.moon-phase {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .sun-and-moon {
+        /* background-size: cover;
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        align-items: center; */
+        margin-left: 100px;
+    }
+}
