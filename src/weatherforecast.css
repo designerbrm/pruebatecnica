@@ -53,21 +53,17 @@ h2 {
 
 @media (max-width: 768px) {
 
-    .banner {
-        background-size: cover;
-        display: flex;
-        width: 500px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menus {
-        margin-right: 33px;
-    }
-
     .weather-forecast {
-        margin-right: -130px;
-        margin-left: 57px;
+        font-size: 14px;
+        margin-left: 55px;
+
+    }
+    h2{
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .weather-icon {
+      margin-left: 10px;  
     }
 
 

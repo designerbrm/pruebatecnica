@@ -29,24 +29,38 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    .banner {
-        background-size: cover;
-        display: flex;
-        width: 500px;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .menus {
-        margin-right: 133px;
-    }
+    @media (max-width: 768px) {
 
-    .weather-details {
-        margin-left: 100px;
-    }
+        h2 {
+            font-size: 16px;
+            margin: 0;
+        }
 
-    .forecast-item {
-        flex-direction: column;
-        width: unset;
+        .banner-content {
+            margin-left: 83px;
+
+        }
+
+        .weather-details {
+            font-size: 14px;
+            margin-left: 90px;  
+            width: 285px;          
+        }
+
+        .forecast-item {
+            flex-direction: column;
+            width: unset;
+        }
+
+        .weather-forecast {
+            font-size: 14px;
+            margin-left: 55px;
+        }
+
+        .weather-forecast h2 {
+            margin-left: 38px;
+        }
+
     }
 }
